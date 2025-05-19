@@ -28,6 +28,7 @@ import (
 	"github.com/sst/opencode/internal/tui/page"
 	"github.com/sst/opencode/internal/tui/state"
 	"github.com/sst/opencode/internal/tui/util"
+	"github.com/sst/opencode/pkg/client"
 )
 
 type keyMap struct {
