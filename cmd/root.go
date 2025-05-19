@@ -4,12 +4,14 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"strings"
 	"sync"
 	"time"
 
 	"log/slog"
 
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/go-viper/mapstructure/v2"
 	zone "github.com/lrstanley/bubblezone"
 	"github.com/spf13/cobra"
 	"github.com/sst/opencode/internal/app"
@@ -22,6 +24,7 @@ import (
 	"github.com/sst/opencode/internal/pubsub"
 	"github.com/sst/opencode/internal/tui"
 	"github.com/sst/opencode/internal/version"
+	"github.com/sst/opencode/pkg/client"
 )
 
 type SessionIDHandler struct {
